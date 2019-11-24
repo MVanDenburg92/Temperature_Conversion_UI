@@ -1,0 +1,44 @@
+#Miles Van Denburg
+#Lab 4
+#IDCE 302: Intro to Python
+#Date: 09/13/19
+#Time Spent: 2 hours.
+
+#Created a function called feelTemp, that converts a given temperature (in Fahrenheit) into four categorical levels, hot, warm, cool, and cold using the following criteria: 
+#if the temperature is 100 or above, the functions returns “It is hot.”;
+#if the temperature is between 70 and 100, the function returns “It is warm.”;
+#if the temperature is between 32 and 70, the functions returns “It is cool.”;
+#if the temperature is below 32, it returns “It is cold.”
+
+def feelTemp(x):
+  #The function feelTemp will take one value for the temperature, and then returns a category as a string.
+    if int(x) >= 100:
+        return("It is hot. \n")
+  #if the temperature is 100 or above, the functions returns “It is hot.”;
+    elif int(x) >= 70 and 100 >= int(x):
+        return("It is warm. \n")
+  #if the temperature is between 70 and 100, the function returns “It is warm.”;  
+    elif int(x) >= 32 and 70 >= int(x):
+        return("It is cool. \n")
+  #if the temperature is between 32 and 70, the functions returns “It is cool.”;  
+    elif int(x) < 32:
+        return("It is cold. \n")
+  #if the temperature is below 32, it returns “It is cold.”
+  
+x = raw_input("Input a temperature in Fahrenheit and find out how the weather is in relative terms.")
+#The user is prompted to input a temperature, then the program will print one of the four categorical levels (hot, warm, cool, and cold) that the given temperature falls into.
+
+#The feelTemp(x) is then called using the print() function. 
+print(feelTemp(x))
+
+#The user is then given the option to run the program again. 
+SecondLife = raw_input("Do you want to continue the program? Enter Y/N \n") 
+
+#The while loop operates for as long as the user does not put in the string character "N".  The If statement checks to see if the input is the "N" character. If the value input is in fact the "N" character, the loop stops and prints a bad seinfeld reference telling the user the program has stopped. 
+while SecondLife != "N":
+  x = raw_input("Input a temperature in Fahrenheit and find out how the weather is in relative terms.")
+  print(feelTemp(x))
+  SecondLife = raw_input("Do you want to continue the program? Enter Y/N \n")
+  
+  if SecondLife == "N":
+    print("No more temp checking for you! Come back, ONE YEAR!")
